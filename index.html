@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Expense Tracker</title>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+
+  <p id="loading">Loading your expenses…</p>
+
+  <div id="error" hidden>
+    <p>Something went wrong while loading your data.</p>
+    <button id="retry-btn" type="button">Retry</button>
+  </div>
+
+  <div id="app" hidden>
+    <form id="expense-form">
+      <label>Description
+        <input type="text" id="description-input">
+      </label>
+      <div id="description-error"></div>
+
+      <label>Amount
+        <input type="number" id="amount-input" step="0.01">
+      </label>
+      <div id="amount-error"></div>
+
+      <label>Category
+        <select id="category-input"></select>
+      </label>
+
+      <button type="submit">Add expense</button>
+    </form>
+
+    <div id="category-filters"></div>
+
+    <p id="summary"></p>
+
+    <ul id="expense-list"></ul>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
